@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- سئو -->
+    <title>اسدچار | آچار فرانسه اسدآباد | خدمات ۲۴ ساعته تاسیسات، پرستار و همه چی!</title>
+    <meta name="description" content="اسدچار (آچار فرانسه اسدآباد) با مدیریت مهندس وحید جعفری و ۱۵ سال سابقه. خدمات تاسیسات، برق، لوله کشی، پرستار سالمند، نگهداری سگ، باغبان و هر چی فکر کنی! ۲۴ ساعته، تضمینی، مشاوره رایگان. اسدآباد، همدان.">
+    <meta name="keywords" content="اسدچار, آچار فرانسه, اسدآباد, همدان, تاسیسات, تعمیر یخچال, پرستار, نگهداری سگ, باغبان, مهندس وحید جعفری, خدمات ۲۴ ساعته, تعمیرات, لوله کشی, برق کاری, ایزوگام">
+    
+    <!-- فونت وزیر -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --asad-navy: #0f2a44;
+            --asad-blue: #1a4a6e;
+            --asad-orange: #f48120;
+            --asad-gold: #d4a843;
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.06);
+            --shadow-hover: 0 12px 36px rgba(0,0,0,0.12);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* ── هیرو (Hero) ── */
+        .hero {
+            background: linear-gradient(160deg, #061a2e 0%, #0f2a44 40%, #1a4a6e 100%);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px 60px;
+            position: relative;
+            clip-path: ellipse(130% 100% at 50% 0%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -80px; left: -60px;
+            width: 280px; height: 280px;
+            background: radial-gradient(circle, rgba(244,129,32,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -80px; right: -60px;
+            width: 320px; height: 320px;
+            background: radial-gradient(circle, rgba(212,168,67,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0,0) scale(1); }
+            50% { transform: translate(35px,-25px) scale(1.12); }
+        }
+
+        .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            animation: fadeDown 0.7s ease;
+        }
+
+        .badge span { color: var(--asad-orange); font-weight: 800; }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.4rem);
+            font-weight: 900;
+            line-height: 1.3;
+            animation: fadeDown 0.8s ease;
+        }
+
+        .hero h1 .brand-name {
+            background: linear-gradient(135deg, var(--asad-orange), #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-weight: 700;
+            margin: 12px 0 6px;
+            animation: fadeDown 0.9s ease;
+        }
+
+        .hero .manager {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            animation: fadeDown 1s ease;
+        }
+
+        .hero .manager strong { color: var(--asad-gold); }
+
+        .cta-box {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius);
+            padding: 22px 28px;
+            margin-top: 28px;
+            display: inline-block;
+            animation: fadeUp 1s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-box p { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+
+        .cta-phone {
+            display: inline-block;
+            background: var(--asad-orange);
+            color: #fff;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(244,129,32,0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .cta-phone:hover {
+            background: #e06d10;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 34px rgba(244,129,32,0.6);
+        }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── محتوای اصلی ── */
+        .container {
+            max-width: 1200px;
+            margin: -30px auto 0;
+            padding: 0 20px 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--asad-navy);
+            margin: 50px 0 6px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--asad-orange);
+            margin: 12px auto 0;
+            border-radius: 4px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        /* ── کارت سرویس‌ها ── */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 18px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--asad-orange);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -35px; right: -35px;
+            width: 80px; height: 80px;
+            background: var(--asad-orange);
+            opacity: 0.05;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .card:hover::before {
+            width: 130px; height: 130px;
+            opacity: 0.1;
+        }
+
+        .card .icon { font-size: 2.4rem; margin-bottom: 10px; position: relative; z-index: 1; }
+        .card h3 { font-size: 1rem; font-weight: 800; color: var(--asad-navy); margin-bottom: 4px; position: relative; z-index: 1; }
+        .card p { font-size: 0.82rem; color: var(--text-light); position: relative; z-index: 1; }
+
+        /* ── کارت شوخی ── */
+        .hook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 25px 0;
+        }
+
+        .hook-card {
+            background: var(--card);
+            border: 2px dashed var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .hook-card:hover {
+            border-color: var(--asad-orange);
+            border-style: solid;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .hook-emoji { font-size: 2.6rem; }
+        .hook-q { font-weight: 800; color: var(--asad-navy); margin: 8px 0; }
+        .hook-a { font-weight: 900; color: var(--asad-orange); font-size: 1.05rem; }
+
+        /* ── برندها ── */
+        .brands-box {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin: 35px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .brands-box h3 { font-weight: 900; color: var(--asad-navy); margin-bottom: 18px; }
+        .brand-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+        .brand-tag {
+            background: #f1f5f9;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .brand-tag:hover {
+            background: var(--asad-orange);
+            color: #fff;
+            border-color: var(--asad-orange);
+        }
+
+        /* ── گارانتی ── */
+        .guarantee {
+            background: linear-gradient(135deg, #0f2a44, #1a4a6e);
+            color: #fff;
+            border-radius: var(--radius);
+            padding: 35px 25px;
+            margin: 35px 0;
+            text-align: center;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+
+        .guarantee h2 { font-weight: 900; margin-bottom: 15px; }
+        .guarantee .feats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .guarantee .feat { font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .guarantee .feat span { font-size: 1.3rem; }
+
+        /* ── دکمه‌های شناور ── */
+        .floating-bar {
+            position: fixed;
+            bottom: 18px;
+            left: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 999;
+        }
+
+        .fbtn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 1.4rem;
+            position: relative;
+        }
+
+        .fbtn:hover { transform: scale(1.1); }
+
+        .fbtn.whatsapp { background: #25D366; color: #fff; }
+        .fbtn.bale { background: #2dc26b; color: #fff; }
+        .fbtn.rubika { background: #ffc107; color: #1e293b; }
+        .fbtn.call {
+            background: var(--asad-orange);
+            color: #fff;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(244,129,32,0.6); }
+            50% { box-shadow: 0 0 0 18px rgba(244,129,32,0); }
+        }
+
+        .fbtn .tooltip {
+            position: absolute;
+            right: 60px;
+            background: #1e293b;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .fbtn:hover .tooltip { opacity: 1; right: 55px; }
+
+        /* ── فوتر ── */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 10px;
+        }
+
+        /* ── رسپانسیو ── */
+        @media (max-width: 768px) {
+            .hero { clip-path: ellipse(160% 95% at 50% 0%); padding: 25px 15px 45px; }
+            .hero h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+            .card { padding: 16px 10px; }
+            .card .icon { font-size: 1.9rem; }
+            .card h3 { font-size: 0.85rem; }
+        }
+
+        @media (max-width: 480px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 1.5rem; }
+            .fbtn { width: 44px; height: 44px; font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════════════ هیرو ════════════ -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                📍 <span>اسدآباد، همدان</span> | از ۱۳۸۸ تا امروز
+            </div>
+            <h1>
+                <span class="brand-name">اسدچار</span><br>
+                هر جا کم آوردی، اسدچار خبر کن!
+            </h1>
+            <p class="tagline">🏢 آچار فرانسه اسدآباد | خدمات ۲۴ ساعته</p>
+            <p class="manager">
+                👨‍🔧 مدیریت <strong>مهندس وحید جعفری</strong> | <strong>۱۵ سال سابقه درخشان</strong>
+            </p>
+            <div class="cta-box">
+                <p>🚨 ۲۴ ساعته پای کاریم... حتی نصفه شب!</p>
+                <a href="tel:+989331831731" class="cta-phone">📞 همین الان زنگ بزن - ۰۹۳۳۱۸۳۱۷۳۱</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ════════════ محتوا ════════════ -->
+    <div class="container">
+
+        <!-- ── هوک‌های بامزه ── -->
+        <h2 class="section-title">🤔 کی وقتشه به اسدچار زنگ بزنی؟</h2>
+        <p class="section-sub">از یخچال خراب تا سگ نگهداری، اسدچار همه کارست!</p>
+        <div class="hook-grid">
+            <div class="hook-card"><div class="hook-emoji">🧊</div><p class="hook-q">یخچال خرابه؟</p><p class="hook-a">🔧 اسدچار خبر کن!</p></div>
+            <div class="hook-card"><div class="hook-emoji">📡</div><p class="hook-q">ماهواره قطع شده؟</p><p class="hook-a">🔧 اسدچار خبر کن!</p></div>
+            <div class="hook-card"><div class="hook-emoji">🚿</div><p class="hook-q">لوله ترکیده؟</p><p class="hook-a">🔧 اسدچار خبر کن!</p></div>
+            <div class="hook-card"><div class="hook-emoji">🐶</div><p class="hook-q">سگت تنهاست؟</p><p class="hook-a">🔧 اسدچار خبر کن!</p></div>
+            <div class="hook-card"><div class="hook-emoji">👴</div><p class="hook-q">پرستار می‌خوای؟</p><p class="hook-a">🔧 اسدچار خبر کن!</p></div>
+            <div class="hook-card"><div class="hook-emoji">🌿</div><p class="hook-q">باغچه به هم ریخته؟</p><p class="hook-a">🔧 اسدچار خبر کن!</p></div>
+            <div class="hook-card"><div class="hook-emoji">🛗</div><p class="hook-q">آسانسور خرابه؟</p><p class="hook-a">🔧 اسدچار خبر کن!</p></div>
+            <div class="hook-card"><div class="hook-emoji">🏠</div><p class="hook-q">ایزوگام نشتی داره؟</p><p class="hook-a">🔧 اسدچار خبر کن!</p></div>
+        </div>
+
+        <!-- ── خدمات فنی ── -->
+        <h2 class="section-title">🛠️ خدمات فنی و تاسیساتی</h2>
+        <p class="section-sub">از برق ساختمون تا تعمیر یخچال، همه رو اسدچاری انجام بده!</p>
+        <div class="grid">
+            <div class="card"><div class="icon">⚡</div><h3>برق‌کاری</h3><p>سیم‌کشی، تابلو، عیب‌یابی</p></div>
+            <div class="card"><div class="icon">🔧</div><h3>لوله‌کشی</h3><p>آب، فاضلاب، گاز</p></div>
+            <div class="card"><div class="icon">📡</div><h3>آنتن ماهواره</h3><p>نصب و تنظیم حرفه‌ای</p></div>
+            <div class="card"><div class="icon">❄️</div><h3>کولر و اسپلیت</h3><p>نصب، تعمیر، شارژ گاز</p></div>
+            <div class="card"><div class="icon">🛗</div><h3>آسانسور</h3><p>سرویس و رفع خرابی</p></div>
+            <div class="card"><div class="icon">🧊</div><h3>یخچال و فریزر</h3><p>نمایندگی تمام برندها</p></div>
+            <div class="card"><div class="icon">👕</div><h3>لباسشویی</h3><p>ال‌جی، سامسونگ، پاکشوما</p></div>
+            <div class="card"><div class="icon">🚽</div><h3>تخلیه فاضلاب</h3><p>رفع گرفتگی و تخلیه چاه</p></div>
+            <div class="card"><div class="icon">🏗️</div><h3>ایزوگام</h3><p>اجرا با ضمانت کتبی</p></div>
+            <div class="card"><div class="icon">🧱</div><h3>گچ و سیمان</h3><p>بازسازی دیوار و کف</p></div>
+            <div class="card"><div class="icon">🖌️</div><h3>نقاشی ساختمان</h3><p>رنگ‌آمیزی داخلی و خارجی</p></div>
+            <div class="card"><div class="icon">🔑</div><h3>قفل و کلید</h3><p>قفل‌سازی سیار در محل</p></div>
+        </div>
+
+        <!-- ── خدمات عمومی ── -->
+        <h2 class="section-title">🏡 خدمات رفاهی و عمومی</h2>
+        <p class="section-sub">اسدچار فقط فنی نیست، هر کاری بخوای برات داره!</p>
+        <div class="grid">
+            <div class="card"><div class="icon">👩‍⚕️</div><h3>پرستار سالمند</h3><p>مجرب و آموزش‌دیده</p></div>
+            <div class="card"><div class="icon">👶</div><h3>پرستار کودک</h3><p>با بهترین مراقبت</p></div>
+            <div class="card"><div class="icon">🐕</div><h3>نگهداری سگ</h3><p>غذا، پیاده‌روی، مراقبت</p></div>
+            <div class="card"><div class="icon">🐱</div><h3>نگهداری گربه</h3><p>مراقبت در سفر شما</p></div>
+            <div class="card"><div class="icon">🌳</div><h3>باغبان</h3><p>هرس، کاشت، نگهداری</p></div>
+            <div class="card"><div class="icon">🛡️</div><h3>نگهبان</h3><p>ساختمان، باغ، ویلا</p></div>
+            <div class="card"><div class="icon">👷</div><h3>کارگر ساده</h3><p>جابجایی، نظافت، کمک</p></div>
+            <div class="card"><div class="icon">🧹</div><h3>نظافت منزل</h3><p>کامل با مواد شوینده</p></div>
+        </div>
+
+        <!-- ── برندها ── -->
+        <div class="brands-box">
+            <h3>🏷️ نمایندگی رسمی تعمیرات لوازم خانگی</h3>
+            <p style="color:var(--text-light); margin-bottom:20px;">اسدچار، نماینده تعمیرات برندهای معتبر در اسدآباد</p>
+            <div class="brand-tags">
+                <span class="brand-tag">ال‌جی LG</span>
+                <span class="brand-tag">سامسونگ</span>
+                <span class="brand-tag">پاکشوما</span>
+                <span class="brand-tag">خزر</span>
+                <span class="brand-tag">امرسان</span>
+                <span class="brand-tag">بوش Bosch</span>
+                <span class="brand-tag">بکو Beko</span>
+                <span class="brand-tag">کنوود</span>
+                <span class="brand-tag">دوو</span>
+                <span class="brand-tag">اسنوا</span>
+            </div>
+        </div>
+
+        <!-- ── گارانتی ── -->
+        <div class="guarantee">
+            <h2>💯 چرا اسدچار؟</h2>
+            <div class="feats">
+                <div class="feat"><span>✅</span> ۱۵ سال سابقه</div>
+                <div class="feat"><span>🕐</span> ۲۴ ساعته</div>
+                <div class="feat"><span>🔒</span> ضمانت کتبی</div>
+                <div class="feat"><span>💬</span> مشاوره رایگان</div>
+                <div class="feat"><span>🚀</span> اعزام فوری</div>
+                <div class="feat"><span>💰</span> قیمت منصفانه</div>
+            </div>
+            <p style="font-size:1.2rem; font-weight:700; margin-top:15px;">
+                📞 همین حالا تماس بگیرید: <span style="color:var(--asad-orange); font-size:1.4rem;">۰۹۳۳۱۸۳۱۷۳۱</span>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- ════════════ دکمه‌های شناور ════════════ -->
+    <div class="floating-bar">
+        <a href="https://wa.me/989331831731" class="fbtn whatsapp" target="_blank" rel="noopener">
+            💬 <span class="tooltip">واتساپ</span>
+        </a>
+        <a href="https://ble.ir/asadchar" class="fbtn bale" target="_blank" rel="noopener">
+            ب <span class="tooltip">بله</span>
+        </a>
+        <a href="https://rubika.ir/asadchar" class="fbtn rubika" target="_blank" rel="noopener">
+            ر <span class="tooltip">روبیکا</span>
+        </a>
+        <a href="tel:+989331831731" class="fbtn call">
+            📞 <span class="tooltip">تماس فوری</span>
+        </a>
+    </div>
+
+    <!-- ════════════ فوتر ════════════ -->
+    <div class="footer">
+        <p><strong>اسدچار</strong> | آچار فرانسه اسدآباد | استان همدان</p>
+        <p>مدیریت: مهندس وحید جعفری | AsadChar.ir</p>
+        <p style="margin-top:8px; font-size:0.8rem;">© ۲۰۲۴ اسدچار | هر جا کم آوردی، اسدچار خبر کن!</p>
+    </div>
+
+</body>
+</html>
